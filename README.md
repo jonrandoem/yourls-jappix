@@ -4,8 +4,7 @@ yourls-jappix
 About
 ------------
 
-yourls-jappix is a plugin for [YOURLS](http://yourls.org/). The plugin adds a new share link into the Quick Share box (available for each URL shown in the Yourls admin area).
-The added link allows the sharing of the URL to a [Jappix](http://http://jappix.org/) installation.
+yourls-jappix is a plugin for [YOURLS](http://yourls.org/). The plugin adds a [JappixMini](http://http://jappix.org/) chat on your Yourls admin pages.
 
 Obviously, you need a valid Yourls installation and a valid Jappix installation.
 
