@@ -47,12 +47,12 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$animate = ( defined('JAPPIX_ANIMATE') && JAPPIX_ANIMATE == true ) ? 'MINI_ANIMATE = true;' : 'MINI_ANIMATE = false;';
 
-		/*
+		$nick = ( defined('JAPPIX_NICKNAME') && JAPPIX_ANIMATE != "" ) ? 'MINI_RANDNICK = false; MINI_NICKNAME = true;' : 'MINI_RANDNICK = true;';
+
 		$groupChats = '';
-		if ( defined('JAPPIX_GROUPCHATS') && is_array(JAPPIX_GROUPCHATS) ) {
-			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', JAPPIX_GROUPCHATS) . '"];';
+		if ( isset($jappix_groupchats) && is_array($jappix_groupchats) ) {
+			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $jappix_groupchats) . '"];';
 		}
-		*/
 
 		echo <<<JAPPIX
 
@@ -61,6 +61,7 @@ function jr_yourls_jappix_footer( $args ) {
 			jQuery.getScript("$url", function() {
 				$groupChats
 				$animate
+				$nick
 				launchMini($paramStr);
 			});
 		</script>
