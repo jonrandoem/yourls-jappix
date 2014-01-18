@@ -49,6 +49,8 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$nick = ( defined('JAPPIX_NICKNAME') && JAPPIX_ANIMATE != "" ) ? 'MINI_RANDNICK = false; MINI_NICKNAME = true;' : 'MINI_RANDNICK = true;';
 
+		$resource = ( defined('JAPPIX_RESOURCE') && JAPPIX_RESOURCE != "" ) ? 'MINI_RESOURCE = "' . JAPPIX_RESOURCE . '";' : '';
+
 		$groupChats = '';
 		if ( isset($jappix_groupchats) && is_array($jappix_groupchats) ) {
 			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $jappix_groupchats) . '"];';
