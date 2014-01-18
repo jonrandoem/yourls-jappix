@@ -64,6 +64,7 @@ function jr_yourls_jappix_footer( $args ) {
 				$groupChats
 				$animate
 				$nick
+				$res
 				launchMini($paramStr);
 			});
 		</script>
