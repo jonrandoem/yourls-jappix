@@ -38,14 +38,14 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$autoconnect = ( defined('JAPPIX_AUTOCONNECT') && JAPPIX_AUTOCONNECT == true ) ? 'true' : 'false';
 
-		$animate = ( defined('JAPPIX_ANIMATE') && JAPPIX_ANIMATE == true ) ? 'true' : 'false';
-
 		$domain = ( defined('JAPPIX_DOMAIN') && JAPPIX_DOMAIN != "" ) ? JAPPIX_DOMAIN : 'jappix.com';
 
-		$paramStr = $autoconnect . ', ' . $animate . ', "' . $domain . '"';
+		$paramStr = $autoconnect . ', true, "' . $domain . '"';
 		if ( defined('JAPPIX_AUTH') && JAPPIX_AUTH == true && defined('JAPPIX_USER') && defined('JAPPIX_PASSWORD') ) {
 			$paramStr .= ', "' . JAPPIX_USER . '", "' . JAPPIX_PASSWORD . '"';
 		}
+
+		$animate = ( defined('JAPPIX_ANIMATE') && JAPPIX_ANIMATE == true ) ? 'MINI_ANIMATE = true;' : 'MINI_ANIMATE = false;';
 
 		/*
 		$groupChats = '';
@@ -60,6 +60,7 @@ function jr_yourls_jappix_footer( $args ) {
 			jQuery.ajaxSetup({cache: true});
 			jQuery.getScript("$url", function() {
 				$groupChats
+				$animate
 				launchMini($paramStr);
 			});
 		</script>
