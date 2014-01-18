@@ -1,4 +1,72 @@
 yourls-jappix
-=============
+============
 
-A plugin for YOURLS that adds a JappixMini chat on Yourls pages
+About
+------------
+
+yourls-jappix is a plugin for [YOURLS](http://yourls.org/). The plugin adds a new share link into the Quick Share box (available for each URL shown in the Yourls admin area).
+The added link allows the sharing of the URL to a [Jappix](http://http://jappix.org/) installation.
+
+Obviously, you need a valid Yourls installation and a valid Jappix installation.
+
+This plugin has been tested on Yourls:
+* [1.7](https://github.com/YOURLS/YOURLS/releases/tag/1.7)
+
+
+Installation
+------------
+
+1. Unzip the plugin. You get a "yourls-jappix" folder
+2. Upload this folder into the user/plugins folder of your Yourls installation
+3. Edit your config.php file (located at user/config.php in your Yourls installation)
+4. Define the URL of your Jappix installation by inserting the following line at the end of your config.php file. Adapt the URL "https://static.jappix.com" to your Jappix installation's URL (No trailing slash !!!), and save changes to config.php
+5. Define more options, like the example below:
+
+```
+// Enable the service
+define('JAPPIX_ENABLE', true);
+
+// The Jappix server's URL. No trailing slash !!! And no final /php !
+define('JAPPIX_URL', 'https://static.jappix.com');
+
+// Define the lang for Jappix
+// Choose one of the following:
+// ar bg cs de en eo es et fa fr he hu id it ja la lb
+// mn nl oc pl pt-br pt ru sk sv tr uk zh-cn zh-tw
+define('JAPPIX_LANG', 'fr');
+
+// Define the resource (as in 'What kind of resource is talking to Jappix?').
+// Choose any string you want.
+define('JAPPIX_RESOURCE', 'Yourls');
+
+// Define the the domain for your connection
+define('JAPPIX_DOMAIN', 'anonymous.jappix.com');
+
+// Use the option below to disable anonymous mode
+define('JAPPIX_AUTH', true);
+
+// With JAPPIX_AUTH to true, you can enable login with user and password
+// On Jappix and Jabber in general, a login is like an email: user@domain.com
+// Here, the user part is defined below,
+// and the domain part is defined by JAPPIX_DOMAIN
+define('JAPPIX_USER', 'dave');
+define('JAPPIX_PASSWORD', 'secret');
+
+// Auto-connect? Should work in anonymous or logged modes
+define('JAPPIX_AUTOCONNECT', true);
+
+// Animate JappixMini?
+define('JAPPIX_ANIMATE', true);
+
+// Group chats to join at launch (you must provide an array of strings here)
+$jappix_groupchats = array("support@muc.jappix.org");
+```
+
+Finally, activate the plugin in the admin area
+
+
+
+License
+------------
+
+This theme is licensed under [MIT License](https://github.com/jonrandoem/yourls-jappix/blob/master/LICENSE).
