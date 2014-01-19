@@ -61,7 +61,7 @@ define('JAPPIX_ANIMATE', true);
 
 // Define your Jappix Nickname
 // if not defined or if equals to "", a random nickname will be chosen
-define('JAPPIX_NICKNAME', true);
+define('JAPPIX_NICKNAME', 'davZ');
 
 // Group chats to join at launch (you must provide an array of strings here)
 $jappix_groupchats = array("support@muc.jappix.org");
