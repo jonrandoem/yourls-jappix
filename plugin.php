@@ -47,7 +47,7 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$animate = ( defined('JAPPIX_ANIMATE') && JAPPIX_ANIMATE == true ) ? 'MINI_ANIMATE = true;' : 'MINI_ANIMATE = false;';
 
-		$nick = ( defined('JAPPIX_NICKNAME') && JAPPIX_ANIMATE != "" ) ? 'MINI_RANDNICK = false; MINI_NICKNAME = true;' : 'MINI_RANDNICK = true;';
+		$nick = ( defined('JAPPIX_NICKNAME') && JAPPIX_NICKNAME != "" ) ? 'MINI_RANDNICK = false; MINI_NICKNAME = "' . JAPPIX_NICKNAME . '";' : 'MINI_RANDNICK = true;';
 
 		$resource = ( defined('JAPPIX_RESOURCE') && JAPPIX_RESOURCE != "" ) ? 'MINI_RESOURCE = "' . JAPPIX_RESOURCE . '";' : '';
 
