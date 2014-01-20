@@ -38,7 +38,7 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$autoconnect = ( defined('JAPPIX_AUTOCONNECT') && JAPPIX_AUTOCONNECT == true ) ? 'true' : 'false';
 
-		$domain = ( defined('JAPPIX_DOMAIN') && JAPPIX_DOMAIN != "" ) ? JAPPIX_DOMAIN : 'jappix.com';
+		$domain = ( defined('JAPPIX_DOMAIN') && JAPPIX_DOMAIN != "" ) ? JAPPIX_DOMAIN : 'anonymous.jappix.com';
 
 		$paramStr = $autoconnect . ', true, "' . $domain . '"';
 		if ( defined('JAPPIX_AUTH') && JAPPIX_AUTH == true && defined('JAPPIX_USER') && defined('JAPPIX_PASSWORD') ) {

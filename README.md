@@ -23,54 +23,68 @@ Installation
 
 ```
 // Enable the service
+// default: false
 define('JAPPIX_ENABLE', true);
 
 // The Jappix server's URL. No trailing slash !!! And no final /php (it will be added for you) !
+// default: 'https://static.jappix.com'
 define('JAPPIX_URL', 'https://static.jappix.com');
 
 // Define the lang for Jappix
 // Choose one of the following:
 // ar bg cs de en eo es et fa fr he hu id it ja la lb
 // mn nl oc pl pt-br pt ru sk sv tr uk zh-cn zh-tw
+// default: 'en'
 define('JAPPIX_LANG', 'fr');
 
 // Define the resource (as in 'What kind of resource is talking to Jappix?').
 // Choose any string you want.
+// default: 'Yourls'
 define('JAPPIX_RESOURCE', 'Yourls');
 
 // Define the the domain for your connection
+// default: 'anonymous.jappix.com'
 define('JAPPIX_DOMAIN', 'anonymous.jappix.com');
 
 // Use the option below to disable anonymous mode
+// default: false
 define('JAPPIX_AUTH', true);
 
 // With JAPPIX_AUTH to true, you can enable login with user and password
 // On Jappix and Jabber in general, a login is like an email: user@domain.com
 // Here, the user part is defined below,
 // and the domain part is defined by JAPPIX_DOMAIN
+// default: ''
 define('JAPPIX_USER', 'dave');
+// default: ''
 define('JAPPIX_PASSWORD', 'secret');
 
 // Auto-connect? Should work in anonymous or logged modes
+// default: false
 define('JAPPIX_AUTOCONNECT', true);
 
 // Define your Jappix Nickname
 // if not defined or if equals to "", a random nickname will be chosen
+// default: ''
 define('JAPPIX_NICKNAME', 'davZ');
 
 // Animate JappixMini?
 // Note that the animation only occurs if $jappixAutoConnect equals false
 // and if $jappixGroupChats is an empty array or is not defined.
+// default: false
 define('JAPPIX_ANIMATE', true);
 
 // Define the error URL (URL of the link that will be displayed if connection fails
 // If not defined, it defaults to 'https://mini.jappix.com/issues'
+// default: 'https://mini.jappix.com/issues'
 define('JAPPIX_ERROR_LINK', 'https://mini.jappix.com/issues');
 
 // Disable JappixMini on mobile devices?
+// default: false
 define('JAPPIX_DISABLE_MOBILE', true);
 
 // Group chats to join at launch (you must provide an array of strings here)
+// default: array()
 $jappix_groupchats = array("support@muc.jappix.org");
 ```
 
