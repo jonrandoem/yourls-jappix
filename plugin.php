@@ -51,6 +51,8 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$resource = ( defined('JAPPIX_RESOURCE') && JAPPIX_RESOURCE != "" ) ? 'MINI_RESOURCE = "' . JAPPIX_RESOURCE . '";' : '';
 
+		$error = ( defined('JAPPIX_ERROR_LINK') && JAPPIX_ERROR_LINK != "" ) ? 'MINI_ERROR_LINK = "' . JAPPIX_ERROR_LINK . '";' : 'MINI_ERROR_LINK = "https://mini.jappix.com/issues"';
+
 		$groupChats = '';
 		if ( isset($jappix_groupchats) && is_array($jappix_groupchats) ) {
 			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $jappix_groupchats) . '"];';
@@ -65,6 +67,7 @@ function jr_yourls_jappix_footer( $args ) {
 				$animate
 				$nick
 				$res
+				$error
 				launchMini($paramStr);
 			});
 		</script>

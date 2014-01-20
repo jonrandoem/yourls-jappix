@@ -25,7 +25,7 @@ Installation
 // Enable the service
 define('JAPPIX_ENABLE', true);
 
-// The Jappix server's URL. No trailing slash !!! And no final /php !
+// The Jappix server's URL. No trailing slash !!! And no final /php (it will be added for you) !
 define('JAPPIX_URL', 'https://static.jappix.com');
 
 // Define the lang for Jappix
@@ -54,14 +54,18 @@ define('JAPPIX_PASSWORD', 'secret');
 // Auto-connect? Should work in anonymous or logged modes
 define('JAPPIX_AUTOCONNECT', true);
 
+// Define your Jappix Nickname
+// if not defined or if equals to "", a random nickname will be chosen
+define('JAPPIX_NICKNAME', 'davZ');
+
 // Animate JappixMini?
 // Note that the animation only occurs if $jappixAutoConnect equals false
 // and if $jappixGroupChats is an empty array or is not defined.
 define('JAPPIX_ANIMATE', true);
 
-// Define your Jappix Nickname
-// if not defined or if equals to "", a random nickname will be chosen
-define('JAPPIX_NICKNAME', 'davZ');
+// Define the error URL (URL of the link that will be displayed if connection fails
+// If not defined, it defaults to 'https://mini.jappix.com/issues'
+define('JAPPIX_ERROR_LINK', 'https://mini.jappix.com/issues');
 
 // Group chats to join at launch (you must provide an array of strings here)
 $jappix_groupchats = array("support@muc.jappix.org");
