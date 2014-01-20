@@ -53,6 +53,8 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$error = ( defined('JAPPIX_ERROR_LINK') && JAPPIX_ERROR_LINK != "" ) ? 'MINI_ERROR_LINK = "' . JAPPIX_ERROR_LINK . '";' : 'MINI_ERROR_LINK = "https://mini.jappix.com/issues"';
 
+		$disableMobile = ( defined('JAPPIX_DISABLE_MOBILE') && JAPPIX_DISABLE_MOBILE == true ) ? 'MINI_DISABLE_MOBILE = true;' : 'MINI_DISABLE_MOBILE = false;';
+
 		$groupChats = '';
 		if ( isset($jappix_groupchats) && is_array($jappix_groupchats) ) {
 			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $jappix_groupchats) . '"];';
@@ -68,6 +70,7 @@ function jr_yourls_jappix_footer( $args ) {
 				$nick
 				$res
 				$error
+				$disableMobile
 				launchMini($paramStr);
 			});
 		</script>

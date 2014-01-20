@@ -67,6 +67,9 @@ define('JAPPIX_ANIMATE', true);
 // If not defined, it defaults to 'https://mini.jappix.com/issues'
 define('JAPPIX_ERROR_LINK', 'https://mini.jappix.com/issues');
 
+// Disable JappixMini on mobile devices?
+define('JAPPIX_DISABLE_MOBILE', true);
+
 // Group chats to join at launch (you must provide an array of strings here)
 $jappix_groupchats = array("support@muc.jappix.org");
 ```
