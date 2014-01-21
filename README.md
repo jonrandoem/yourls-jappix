@@ -26,6 +26,11 @@ Installation
 // default: false
 define('JAPPIX_ENABLE', true);
 
+// Enable JappixMini only for logged users
+// Jappix won't show on the login page with this set to true
+// default: false
+define('JAPPIX_ENABLE_FOR_LOGGED', true);
+
 // The Jappix server's URL. No trailing slash !!! And no final /php (it will be added for you) !
 // default: 'https://static.jappix.com'
 define('JAPPIX_URL', 'https://static.jappix.com');

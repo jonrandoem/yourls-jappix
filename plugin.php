@@ -11,7 +11,13 @@ Author URI: https://github.com/jonrandoem/
 // No direct call
 if( !defined( 'YOURLS_ABSPATH' ) ) die();
 
-yourls_add_action( 'admin_init', 'jr_yourls_jappix' );
+if (defined('JAPPIX_ENABLE') && JAPPIX_ENABLE === true ) {
+	if ( defined('JAPPIX_ENABLE_FOR_LOGGED') && JAPPIX_ENABLE_FOR_LOGGED === true ) {
+		yourls_add_action( 'login', 'jr_yourls_jappix' );
+	} else {
+		yourls_add_action( 'admin_init', 'jr_yourls_jappix' );
+	}
+}
 
 function jr_yourls_jappix( $args ) {
 	yourls_add_action( 'html_footer', 'jr_yourls_jappix_footer' );
