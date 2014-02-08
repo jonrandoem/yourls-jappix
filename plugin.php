@@ -61,6 +61,7 @@ function jr_yourls_jappix_footer( $args ) {
 
 		$disableMobile = ( defined('JAPPIX_DISABLE_MOBILE') && JAPPIX_DISABLE_MOBILE == true ) ? 'MINI_DISABLE_MOBILE = true;' : 'MINI_DISABLE_MOBILE = false;';
 
+		global $jappix_groupchats;
 		$groupChats = '';
 		if ( isset($jappix_groupchats) && is_array($jappix_groupchats) ) {
 			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $jappix_groupchats) . '"];';
