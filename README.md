@@ -4,7 +4,7 @@ yourls-jappix
 About
 ------------
 
-yourls-jappix is a plugin for [YOURLS](http://yourls.org/). The plugin adds a [JappixMini](http://jappix.org/) chat on your Yourls admin pages.
+yourls-jappix is a plugin for [YOURLS](http://yourls.org/). The plugin adds a [JappixMini](https://project.jappix.com/) chat on your Yourls admin pages.
 
 Obviously, you need a valid Yourls installation and a valid Jappix installation.
 
